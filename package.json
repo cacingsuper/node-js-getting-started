@@ -22,7 +22,7 @@
     "morgan": "^1.10.0",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.5.0",
+    "sequelize": "^6.5.0"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
