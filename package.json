@@ -7,7 +7,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "babel-node --preset src/index.js",
+    "start": "babel-node src/index.js",
     "dev": "nodemon --exec babel-node src/index.js",
     "test": "node test.js",
     "migrate": "sequelize db:migrate:status"
