@@ -7,22 +7,25 @@
   },
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "dev": "nodemon --exec src/index.js",
+    "start": "nodemon --exec babel-node src/index.js",
     "test": "node test.js",
-    "migrate": "sequelize db:migrate:status" 
+    "migrate": "sequelize db:migrate:status"
   },
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
     "body-parser": "^1.19.0",
     "brew": "^0.0.8",
     "ejs": "^3.1.5",
     "express": "^4.15.2",
+    "morgan": "^1.10.0",
     "mysql2": "^2.2.5",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.5.0"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
     "got": "^11.3.0",
     "nodemon": "^2.0.7",
     "tape": "^4.7.0"

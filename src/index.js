@@ -1,7 +1,16 @@
-const express = require('express')
-const path = require('path')
+import express from 'express';
+import path from 'path';
+import logger from 'morgan';
+import bodyParser from 'body-parser';
+import routes from '../server/routes';
 const PORT = process.env.PORT || 5000
-const app = express()
+const app = express();
+
+routes(app)
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/' , (req,res) => {
   res.send("Hello from Heroku")
